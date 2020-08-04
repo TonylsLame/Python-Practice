@@ -1,0 +1,32 @@
+# Object Oriented Practice
+
+class Car:
+	def __init__(self, make, color, mileage):
+		self.make = make
+		self.color = color
+		self.mileage = mileage
+
+	def __str__(self):
+		return f"The {self.color} {self.make} has {self.mileage} miles."
+
+class Tree:
+	def __init__(somethingelse, species, height, age):
+		somethingelse.age = age
+		somethingelse.height = height
+		somethingelse.species = species
+
+
+	def __str__(somethingelse):
+		return f"The {somethingelse.species} tree is {somethingelse.height} meters tall and is {somethingelse.age} years old."
+
+blueCar = Car("Ford", "blue", 20000)
+redCar = Car("Tesla", "red", 30000)
+
+print(blueCar)
+print(redCar)
+
+bristleConePine = Tree("Bristlecone Pine", 13, 2000)
+juniper = Tree("Juniper", 5, 50)
+
+print(bristleConePine)
+print(juniper)

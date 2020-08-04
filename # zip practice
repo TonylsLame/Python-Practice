@@ -1,0 +1,7 @@
+a = ("edy", "newton", "einstein")
+b = ("edy", "fredward", "jon")
+
+x = zip(a,b)
+
+for y in x:
+	print(y)

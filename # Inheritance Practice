@@ -1,0 +1,43 @@
+# Inheritance Practice
+
+class Person:
+	def __init__(self, name, age):
+		self.name = name
+		self.age = age
+
+	def __str__(self):
+		return f"{self.name} is {self.age} years old"
+
+class Student(Person):
+	def __init__(self, name, age, grade, major):
+		self.grade = grade
+		self.major = major
+
+		Person.__init__(self, name, age)
+
+
+class CollegeStudent(Student):
+	def __init__(self, name, age, grade, major, university):
+		self.university = university
+
+		Student.__init__(self, name, age, grade, major)
+
+
+class Worker(Person):
+	def __init__(self, name, age, business):
+		self.business = business
+
+		Person.__init__(self, name, age)
+
+
+jonSnow = Person("Jon Snow", 18)
+print(jonSnow)
+
+branStark = Student("Brandon Stark", 14, 8, "Sitting")
+print(branStark.major)
+print(branStark.name)
+print(branStark)
+
+aryaStark = CollegeStudent("Arya Stark", 15, 9, "Cutting", "House of the Two Faces")
+print(aryaStark.university)
+
